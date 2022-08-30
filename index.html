@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1840693674.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div class="popup">
+    <div class="popup-overlay"></div>
+    <div class="popup-body">
+      <button class="close-btn">&times;</button>
+      <h2 id="popup-title"></h2>
+      <p id="popup-text"></p>
+    </div>
+  </div>
+    <div class="content">
+        <div class="header"><h1>I AM BO<span class="red">RED</span></h1></div>
+        <div class="random-button" id="open-popup-random"><button class="random-btn" onclick="randomButtonClicked()">Random <span class="red">Action</span></button></div>
+        <div class="accessiblity-bar">
+            <h1>Accessiblity</h1>
+            <span class="number" id="acc-out-id">50</span>
+            <input type="range" min="0" max="100" value="50" class="slide accessiblity-range" id="acc-id">
+        </div>
+        <div class="activity-typ-box">
+            <div class="activity-typ-box-element">
+                <label for="education" class="custom-radio">
+                    <input type="radio" name="button" id="radio1" checked>
+                    <span class="radio-btn">
+                        
+                        <div class="hobbies-icon">
+                            <i class="las la-university"></i>
+                            <h3>Education</h3>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <div class="activity-typ-box-element">
+                <label for="recreational" class="custom-radio">
+                    <input type="radio" name="button" id="radio2">
+                    <span class="radio-btn">
+                        
+                        <div class="hobbies-icon">
+                            <i class="las la-tractor"></i>
+                            <h3>Recreational</h3>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <div class="activity-typ-box-element">
+                
+                <label for="social" class="custom-radio">
+                    <input type="radio" name="button" id="radio3">
+                    <span class="radio-btn">
+                       
+                        <div class="hobbies-icon">
+                            <i class="las la-users"></i>
+                            <h3>Social</h3>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <div class="activity-typ-box-element">
+                <label for="diy" class="custom-radio">
+                    <input type="radio" name="button" id="radio4">
+                    <span class="radio-btn">
+                       
+                        <div class="hobbies-icon">
+                            <i class="las la-flask"></i>
+                            <h3>DIY</h3>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <div class="activity-typ-box-element">
+                <label for="charity" class="custom-radio">
+                    <input type="radio" name="button" id="radio5">
+                    <span class="radio-btn">
+                        
+                        <div class="hobbies-icon">
+                            <i class="las la-hand-holding-heart"></i>
+                            <h3>Charity</h3>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <div class="activity-typ-box-element">
+                <label for="cooking" class="custom-radio">
+                    <input type="radio" name="button" id="radio6">
+                    <span class="radio-btn">
+                       
+                        <div class="hobbies-icon">
+                            <i class="las la-hamburger"></i>
+                            <h3>Cooking</h3>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <div class="activity-typ-box-element">
+                <label for="relaxation" class="custom-radio">
+                    <input type="radio" name="button" id="radio7">
+                    <span class="radio-btn">
+                        
+                        <div class="hobbies-icon">
+                            <i class="las la-couch"></i>
+                            <h3>Relaxation</h3>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <div class="activity-typ-box-element">
+                <label for="music" class="custom-radio">
+                    <input type="radio" name="button" id="radio8">
+                    <span class="radio-btn">
+                        
+                        <div class="hobbies-icon">
+                            <i class="las la-headphones"></i>
+                            <h3>Music</h3>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <div class="activity-typ-box-element">
+                <label for="busywork" class="custom-radio">
+                    <input type="radio" name="button" id="radio9">
+                    <span class="radio-btn">
+                    
+                        <div class="hobbies-icon">
+                            <i class="las la-pen-alt"></i>
+                            <h3>Busywork</h3>
+                        </div>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <div class="participant-bar">
+            <h1>Participant <span class="red">Number</span></h1>
+            <span class="number" id="prt-out-id">50</span>
+            <input type="range" min="1" max="10" value="5" id="prt-id" class="slide participant-range">
+        </div>
+        <div class="price-range-bar">
+            <h1>Price <span class="red">Range</span></h1>
+            <span class="number" id="prc-out-id">50</span>
+            <input type="range" min="0" max="100" value="50" id="prc-id" class="slide price-range">
+        </div>
+        <div class="send-button">
+            <button id="open-popup"><h1>Give me <span class="red">activity</span></h1></button>
+        </div>
+        <div class="footer">
+            <h4>Built by</h4>
+            Serhat <span class="surname">Karaman</span>
+            <div class="social-media">
+                <a href="https://www.reddit.com/user/s3rh4tk" target="_blank"><i class="lab la-instagram"></i></a>
+                <a href="https://www.instagram.com/serhat___krmn/?hl=en" target="_blank"><i class="lab la-reddit"></i></a>
+                <a href="https://github.com/MasterofN0ne" target="_blank"><i class="lab la-github-alt"></i></a>
+                <a href="https://twitter.com/master__of_N0ne" target="_blank"><i class="lab la-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/serhatkaraman/" target="_blank"><i class="lab la-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
